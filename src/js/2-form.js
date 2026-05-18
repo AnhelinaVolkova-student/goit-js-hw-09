@@ -12,6 +12,8 @@ const localStorageKey = "feedback-form-state";
 
 
 const savedData = JSON.parse(localStorage.getItem(localStorageKey)) ?? {};
+formData.email = savedData.email ?? "";
+formData.value = savedData.message ?? "";
 emailArea.value = savedData.email ?? "";
 messageArea.value = savedData.message ?? "";
 
